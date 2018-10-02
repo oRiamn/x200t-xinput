@@ -3,7 +3,7 @@
 function toggle {
   local deviceID=$1
   local deviceName=$2
-  
+
   local state=$(xinput list-props "$deviceID" | grep "Device Enabled" | grep -o "[01]$")
 
   if [ $state == '1' ];then

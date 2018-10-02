@@ -52,8 +52,20 @@ For exemple :
 Wacom Serial Penabled 2FG Touchscreen Finger touch is now enable
 ```
 
-# Command list 
+# Command list
+
 ## Toggle
 
 The *toggle* command is used to switch the device state both `enable` and `disable`.
 
+## Rotate
+
+The *rotate* command is used to specifies the orientation of the screen, and can be one of `normal`, `inverted`, `left` or `right`.
+
+## L_rotate
+
+The *l_rotate* command is used to rotate the screen counterclockwise
+
+## R_rotate
+
+The *l_rotate* command is used to rotate the screen clockwise
