@@ -51,3 +51,9 @@ For exemple :
 ./run.sh toggle FINGER
 Wacom Serial Penabled 2FG Touchscreen Finger touch is now enable
 ```
+
+# Command list 
+## Toggle
+
+The *toggle* command is used to switch the device state both `enable` and `disable`.
+

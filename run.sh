@@ -12,4 +12,4 @@ do
     source $file
 done
 # exit 128
-"${command}" "${deviceId}"
+"${command}" "${deviceId}" "${deviceName}"
