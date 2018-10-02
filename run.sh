@@ -3,7 +3,7 @@
 set -e
 
 command="$1"
-deviceName=$(cat .env | grep "^$2:" | cut -d "'" -f2)
+deviceName=$(cat ./.env | grep "^$2:" | cut -d "'" -f2)
 deviceId=$(xinput list --id-only "$deviceName")
 shift
 
