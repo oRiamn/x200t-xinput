@@ -2,12 +2,14 @@
 
 set -e
 
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+
 command="$1"
-deviceName=$(cat $PWD/.env | grep "^$2:" | cut -d "'" -f2)
+deviceName=$(cat "$DIR"/.env | grep "^$2:" | cut -d "'" -f2)
 deviceId=$(xinput list --id-only "$deviceName")
 shift
 
-for file in $PWD/commands/*.sh
+for file in $DIR/commands/*.sh
 do
     source $file
 done
