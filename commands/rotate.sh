@@ -8,20 +8,16 @@ function rotate {
 
     # Work out the next tablet and screen orientations (rotating clockwise)
     case "$rotate" in
-        normal) nextRotate="cw"
-            nextOrient="right" ;;
-        right)   nextRotate="half"
-            nextOrient="inverted" ;;
-        inverted) nextRotate="ccw"
-            nextOrient="left" ;;
-        left)  nextRotate="none"
-            nextOrient="normal" ;;
+       right) nextRotate="cw";;
+        inverted)   nextRotate="half";;
+        left) nextRotate="ccw";;
+        normal)  nextRotate="none";;
     esac
 
     # Rotate the screen
-    xrandr -o $nextOrient
+    xrandr -o $rotate
 
-    echo -e "\e[1m$deviceName\e[21m is now $nextOrient"
+    echo -e "\e[1m$deviceName\e[21m orientation is now $rotate"
 
     # Rotate the tablet
     xsetwacom set "$deviceName" Rotate $nextRotate
